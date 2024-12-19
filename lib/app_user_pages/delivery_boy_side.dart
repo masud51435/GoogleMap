@@ -33,42 +33,69 @@ class DeliveryBoySide extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            const Text(
-              'Delivery Adders:',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 10),
-            const Text(
-              'Phone Number:',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 10),
-            const Text(
-              'Amount to collect:',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
+            Visibility(
+              visible: true,
+              child: Center(
+                child: FilledButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red,
+                    fixedSize: Size(MediaQuery.of(context).size.width, 50),
+                  ),
+                  child: const Text(
+                    'submit',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
               ),
             ),
             const SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                FilledButton(
-                  onPressed: () {},
-                  child: const Text('show Location'),
-                ),
-                const SizedBox(width: 20),
-                FilledButton(
-                  onPressed: () {},
-                  style: FilledButton.styleFrom(backgroundColor: Colors.blue),
-                  child: const Text('start Delivery'),
-                ),
-              ],
+            Visibility(
+              visible: false,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(height: 20),
+                  const Text(
+                    'Delivery Adders:',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  const Text(
+                    'Phone Number:',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  const Text(
+                    'Amount to collect:',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      FilledButton(
+                        onPressed: () {},
+                        child: const Text('show Location'),
+                      ),
+                      const SizedBox(width: 20),
+                      FilledButton(
+                        onPressed: () {},
+                        style: FilledButton.styleFrom(
+                            backgroundColor: Colors.blue),
+                        child: const Text('start Delivery'),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),

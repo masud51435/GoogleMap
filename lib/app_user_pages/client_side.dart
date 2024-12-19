@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:googlemap/app_user_pages/order_list.dart';
+import 'package:googlemap/app_user_pages/order_tracking_page.dart';
 
 class ClientSide extends StatelessWidget {
   const ClientSide({super.key});
@@ -12,15 +15,11 @@ class ClientSide extends StatelessWidget {
         actions: [
           IconButton(
             icon: const Icon(Icons.menu),
-            onPressed: () {
-              // Show side menu
-            },
+            onPressed: () => Get.to(() => const OrderList()),
           ),
           IconButton(
             icon: const Icon(Icons.map),
-            onPressed: () {
-              // Show side menu
-            },
+            onPressed: () => Get.to(() => const OrderTrackingPage()),
           ),
         ],
       ),
@@ -59,6 +58,8 @@ class ClientSide extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
                 child: const GoogleMap(
                   mapType: MapType.hybrid,
+                  myLocationButtonEnabled: true,
+                  myLocationEnabled: true,
                   initialCameraPosition: CameraPosition(
                     target: LatLng(37.7749, -122.4194), // San Francisco
                     zoom: 15,
