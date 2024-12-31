@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:googlemap/app_user_pages/choose_page.dart';
 import 'package:googlemap/firebase_options.dart';
-import 'package:googlemap/homepage.dart';
-import 'package:googlemap/map_learning/google_map_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
