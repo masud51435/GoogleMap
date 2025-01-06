@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class NewClass extends StatefulWidget {
@@ -27,8 +26,6 @@ class _NewClassState extends State<NewClass> {
             onPressed: _incrementCounter,
             child: const Text('Increment'),
           ),
-         Icon(Icons.add),
-         Icon(Icons.remove),
         ],
       ),
     );
