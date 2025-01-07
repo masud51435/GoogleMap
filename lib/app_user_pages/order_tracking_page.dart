@@ -38,7 +38,7 @@ class _OrderTrackingPageState extends State<OrderTrackingPage> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: const Text(
-                  'Remaining Distance: 2 Km',
+                  'Remaining Distance: 2 Km away',
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
