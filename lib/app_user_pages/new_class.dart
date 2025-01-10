@@ -24,7 +24,7 @@ class _NewClassState extends State<NewClass> {
           Text('Number: $number'),
           ElevatedButton(
             onPressed: _incrementCounter,
-            child: const Text('Increment now new'),
+            child: const Text('Increment now new now then '),
           ),
         ],
       ),
